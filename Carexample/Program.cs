@@ -135,9 +135,10 @@ namespace Carexample
             try
             {
                 // using  streamwriter to write to a file and  define the file it  has to write to
-                using (StreamWriter file = new StreamWriter("CarResults.txt"))
-                {
+                using (StreamWriter file = new StreamWriter("CarResults.txt"))  // this will write to the  bin/debug directory
+                {   file.Write("The Earliest Car Model is ");
                     file.WriteLine(myCarList[earliestCarIndex].ToString()); //write  earliest car to file
+                    file.Write("The Car Model with the largest sales is ");
                     file.WriteLine(myCarList[maxSalesIndex].ToString()); //write  hiesht sale to  file
                 }
 
